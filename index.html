@@ -8,7 +8,10 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+		
+    <!-- Reproductor invisible -->
+    <audio id="miAudio" src="tu-musica.mp3"></audio>
+		
 		<!-- Wrapper-->
 			<div id="wrapper">
 
@@ -133,9 +136,23 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		    <!-- Script para reproducir con cualquier toque -->
+    <script>
+    function reproducir() {
+        const audio = document.getElementById("miAudio");
+        audio.play().catch(() => {});
+        document.removeEventListener("click", reproducir);
+        document.removeEventListener("touchstart", reproducir);
+    }
+
+    document.addEventListener("click", reproducir);
+    document.addEventListener("touchstart", reproducir);
+    </script>
+
 	</body>
 
 </html>
+
 
 
 
