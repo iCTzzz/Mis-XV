@@ -296,22 +296,22 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-		    <!-- Script para reproducir con cualquier toque -->
-    <script>
-    function reproducir() {
-        const audio = document.getElementById("miAudio");
-        audio.play().catch(() => {});
-        document.removeEventListener("click", reproducir);
-        document.removeEventListener("touchstart", reproducir);
-    }
+		  <script>
+document.addEventListener("click", () => {
+    const audio = document.getElementById("miAudio");
+    audio.muted = false;     // Le quitamos mute al hacer clic
+    audio.play().catch(() => {});
+}, { once: true });
 
-    document.addEventListener("click", reproducir);
-    document.addEventListener("touchstart", reproducir);
-    </script>
+document.addEventListener("touchstart", () => {
+    const audio = document.getElementById("miAudio");
+    audio.muted = false;
+    audio.play().catch(() => {});
+}, { once: true });
+</script>
 
-	</body>
+					</html>
 
-</html>
 
 
 
