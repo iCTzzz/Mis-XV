@@ -37,27 +37,28 @@
 <div style="
     position: relative;
     width: 100%;
-    overflow: hidden;
+    min-height: 100vh;
+    padding: 40px 25px;
+    background-image: url('images/fondoinicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 ">
-    <img src="images/fondoinicio.jpg"
-         style="width: 100%; height: auto; display: block;" 
-         alt="Fondo elegante">
 
-    <!-- TEXTO ENCIMA DE LA IMAGEN -->
+    <!-- CONTENEDOR DEL TEXTO -->
     <div style="
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 30px 25px;
+        max-width: 650px;
         color: #000;
         backdrop-filter: brightness(1.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6;
     ">
 
         <p style="
@@ -281,6 +282,7 @@
 	</body>
 
 </html>
+
 
 
 
